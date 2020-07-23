@@ -432,7 +432,7 @@ function files_json($files)
             array_push($tmp['list'], $tmp1);
         }
     } else return output('', 404);
-    return output(json_encode($tmp));
+    return output(json_encode($tmp), 200, ['Content-Type' => 'application/json']);
 }
 
 function get_access_token($refresh_token)
